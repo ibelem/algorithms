@@ -15,6 +15,7 @@ let bubbleSort = function (array) {
 let bubbleSort2 = function (array) {
   let i, j, temp
   for (i = 0; i < array.length; i++) {
+    // ordered -i array item don't need to compare anymore
     for (j = 0; j < array.length - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
         temp = array[j]

@@ -1,6 +1,6 @@
 import test from 'ava'
-let arraydata = require('../common/arraydata')
-let sorting = require('../algorithm/sorting')
+const arraydata = require('../common/arraydata')
+const sorting = require('../algorithm/sorting')
 
 test('bubble sort 1', t => {
   t.deepEqual(sorting.bubbleSort(arraydata.randomArrayLengthUnique(7)), [0, 1, 2, 3, 4, 5, 6])
