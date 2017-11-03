@@ -1,0 +1,26 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "ava test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibelem/algorithms.git"
+  },
+  "keywords": [
+    "algorithm"
+  ],
+  "author": "belem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibelem/algorithms/issues"
+  },
+  "homepage": "https://github.com/ibelem/algorithms#readme",
+  "dependencies": {
+    "ava": "^0.23.0"
+  }
+}

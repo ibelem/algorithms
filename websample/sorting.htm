@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Algorithm - Sorting</title>
+  <meta name='description' content='Algorithm - Sorting'>
+  <link rel=author title="belem" href="mailto:hi@live.com">
+  <meta name='HandheldFriendly' content='True'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href='css/style.css' rel='stylesheet'>
+</head>
+
+<body>
+  <h3>Algorithm</h3>
+  <h4>Sorting</h4>
+  <div>Type numbers in input box, e.g. 20, 17, 6, 900, 4, 67, 95</div>
+  <input id='inputtext' type='text' value='20, 17, 6, 900, 4, 67, 95'>
+  <input type="button" id='btnbubblesort' value='Bubble Sort'>
+  <div id='divresult'></div>
+  <script src='js/sorting.js'></script>
+  <script>
+    let handleValidData = function (data) {
+      let x = JSON.parse('[' + data + ']')
+      let result;
+      if (x.length > 1) {
+        result = bubbleSort(x);
+      }
+      if (x.length == 0) {
+        result = 'Please type arrary numbers, e.g.  4, 7, 3, 6, 2, 5, 1';
+      }
+      if (x.length == 1) {
+        result = x[0];
+      }
+      return result;
+    }
+
+    let uiSort = function () {
+      function getBubbleSort() {
+        let inputtext = document.querySelector('#inputtext').value;
+        let btnbubblesort = document.querySelector('#btnbubblesort');
+        let divresult = document.querySelector('#divresult');
+        divresult.innerHTML = handleValidData(inputtext);
+      }
+      btnbubblesort.addEventListener('click', getBubbleSort);
+    }
+    document.addEventListener('DOMContentLoaded', uiSort, false);
+  </script>
+</body>
+
+</html>

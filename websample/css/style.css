@@ -1,0 +1,21 @@
+body {
+    margin: 1em;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    color: #444;
+}
+
+div {
+    display: block;
+    margin: 0.5em auto;
+}
+
+input[type='text'] {
+    width: 20vw;
+}
+
+h3,
+h4 {
+    font-weight: normal;
+}
