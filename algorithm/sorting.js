@@ -1,7 +1,9 @@
 let bubbleSort = function (array) {
   let i, j, temp
-  for (i = 0; i < array.length - 1; i++) {
-    for (j = 0; j < array.length - 1; j++) {
+  let n = array.length
+  for (i = 0; i < n; i++) {
+    // ordered -i array item don't need to compare anymore
+    for (j = 0; j < n - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
         temp = array[j]
         array[j] = array[j + 1]
@@ -13,14 +15,13 @@ let bubbleSort = function (array) {
 }
 
 let bubbleSort2 = function (array) {
-  let i, j, temp
-  for (i = 0; i < array.length; i++) {
-    // ordered -i array item don't need to compare anymore
-    for (j = 0; j < array.length - 1 - i; j++) {
+  let i, j
+  let n = array.length
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
-        temp = array[j]
-        array[j] = array[j + 1]
-        array[j + 1] = temp
+        // ES6 destructuring assignment
+        [array[j], array[j + 1]] = [array[j + 1], array[j]]
       }
     }
   }
@@ -28,15 +29,21 @@ let bubbleSort2 = function (array) {
 }
 
 let bubbleSort3 = function (array) {
-  let i, j
-  for (i = 0; i < array.length; i++) {
-    for (j = 0; j < array.length - 1 - i; j++) {
-      if (array[j] > array[j + 1]) {
-        // ES6 destructuring assignment
-        [array[j], array[j + 1]] = [array[j + 1], array[j]]
+  let i
+  let n = array.length
+  let swapped
+  do {
+    swapped = false
+    for (i = 1; i < n; i++) {
+      if (array[i - 1] > array[i]) {
+        var temp = array[i - 1]
+        array[i - 1] = array[i]
+        array[i] = temp
+        swapped = true
       }
     }
-  }
+    n--
+  } while (swapped)
   return array
 }
 
