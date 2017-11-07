@@ -1,7 +1,7 @@
 {
   "name": "algorithms",
   "version": "1.0.0",
-  "description": "",
+  "description": "JavaScript (Node.js) implementation of algorithms",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
