@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "ava test/"
+    "test": "nyc ava",
+    "build": "BABEL_ENV=production babel --out-dir=dist index.js",
+    "report": "nyc report --reporter=html"
+  },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,7 +27,10 @@
     "url": "https://github.com/ibelem/algorithms/issues"
   },
   "homepage": "https://github.com/ibelem/algorithms#readme",
-  "dependencies": {
-    "ava": "^0.23.0"
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "coveralls": "^3.0.0",
+    "nyc": "^11.3.0"
   }
 }
