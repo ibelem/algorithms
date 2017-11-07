@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "nyc ava",
-    "build": "BABEL_ENV=production babel --out-dir=dist index.js",
+    "build": "",
     "report": "nyc report --reporter=html"
   },
   "ava": {

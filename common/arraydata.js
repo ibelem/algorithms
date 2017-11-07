@@ -35,5 +35,6 @@ let randomArrayMax = function (length, max) {
 module.exports = {
   randomArray: randomArray,
   randomArrayUnique: randomArrayUnique,
-  randomArrayMax: randomArrayMax
+  randomArrayMax: randomArrayMax,
+  shuffle: shuffle
 }
