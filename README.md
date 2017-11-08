@@ -16,3 +16,10 @@ npm start
 ```javascript
 npm run test
 ```
+
+### Document
+
+| Algorithm      | Complexity (Worst) | Complexity (Best) | Complexity (Avg) | Space Complexity |  | Wiki | Wiki |
+|----------------|--------------------|-------------------|------------------|------------------|------|------|
+| Bubble Sort    | О(n<sup>2</sup>) | О(n) | О(n<sup>2</sup>) | О(1) | [EN](https://en.wikipedia.org/wiki/Bubble_sort)  | [ZH](https://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)  |
+| Selection Sort | О(n<sup>2</sup> | О(n<sup>2</sup>) | О(n<sup>2</sup>) | О(1) |  [EN](https://en.wikipedia.org/wiki/Selection_sort)    |  [ZH](https://zh.wikipedia.org/wiki/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)    |

@@ -68,9 +68,7 @@ module.exports = {
           indexMin = j
         }
       }
-      if (i !== indexMin) {
-        this.swap(array, i, indexMin)
-      }
+      this.swap(array, i, indexMin)
     }
     return array
   },
