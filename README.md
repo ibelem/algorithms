@@ -3,7 +3,7 @@
 JavaScript (Node.js) implementation of algorithms
 
 [![Build Status](https://travis-ci.org/ibelem/algorithms.svg?branch=master)](https://travis-ci.org/ibelem/algorithms) [![Coverage Status](https://coveralls.io/repos/github/ibelem/algorithms/badge.svg?branch=master)](https://coveralls.io/github/ibelem/algorithms?branch=master)
-[![Dependencies Status](https://david-dm.org/ibelem/algorithms.svg)](https://david-dm.org/ibelem/algorithms.svg) [![devDependencies Status](https://david-dm.org/ibelem/algorithms/dev-status.svg)](https://david-dm.org/ibelem/algorithms/dev-status#info=devDependencies)
+[![Dependencies Status](https://david-dm.org/ibelem/algorithms.svg)](https://david-dm.org/ibelem/algorithms.svg) [![devDependencies Status](https://david-dm.org/ibelem/algorithms/dev-status.svg)](https://david-dm.org/ibelem/algorithms#info=devDependencies)
 
 ### How to run
 
