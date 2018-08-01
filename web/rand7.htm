@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ROS</title>
+  <meta charset='utf-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes" name="viewport"
+  />
+  <style>
+    body {
+      background-color: #2C3138;
+      color: #fff;
+      text-shadow: 1px 1px #000000;
+      font-size: 1em;
+      text-align: center;
+    }
+    div { margin: 2em; }
+    #rand {
+      font-family: 'Courier New', Courier, monospace;
+      text-align: left;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>Implement rand7() function using rand5(), with equal probability between 1 to 7?</div>
+  <div id='rand'>
+    &nbsp;&nbsp;function rand7() {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;let i;
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;while (true) {
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 5 * (rand5() - 1) + (rand5() - 1);
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i
+    < 21) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i % 7 + 1;
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;}
+      <br> &nbsp;&nbsp;}
+      <br>
+  </div>
+  <div id='result'></div>
+
+
+  <div>
+    &copy;2018 Belem
+  </div>
+
+  <script>
+    /**
+     * Returns a random number between min (inclusive) and max (exclusive)
+     */
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    /**
+     * Returns a random integer between min (inclusive) and max (inclusive)
+     * Using Math.round() will give you a non-uniform distribution!
+     */
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function rand5() {
+      return getRandomInt(1, 5)
+    }
+
+    function rand7() {
+      let i;
+      while (true) {
+        i = 5 * (rand5() - 1) + (rand5() - 1);
+        if (i < 21) {
+          return i % 7 + 1;
+        }
+      }
+    }
+
+    function percentage(i) {
+      return ((i / 1000) * 100).toFixed(2)
+    }
+
+    function init() {
+      let result = document.querySelector('#result');
+      let r = '';
+      var a1 = 0
+      var a2 = 0
+      var a3 = 0
+      var a4 = 0
+      var a5 = 0
+      var a6 = 0
+      var a7 = 0
+      for (let i = 0; i < 1000; i++) {
+        let t = rand7();
+        console.log(t)
+        switch (t) {
+          case 1:
+            a1 = a1 + 1;
+            break;
+          case 2:
+            a2 = a2 + 1;
+            break;
+          case 3:
+            a3 = a3 + 1;
+            break;
+          case 4:
+            a4 = a4 + 1;
+            break;
+          case 5:
+            a5 = a5 + 1;
+            break;
+          case 6:
+            a6 = a6 + 1;
+            break;
+          case 7:
+            a7 = a7 + 1;
+            break;
+        }
+        t = t + ' ';
+        r += t;
+      }
+      result.innerHTML = r +
+        `<br><br>1~7 from rand7() in 1000 times:<br><br>
+        Number 1: ${a1}, ${percentage(a1)}%
+        <br>Number 2: ${a2}, ${percentage(a2)}%
+        <br>Number 3: ${a3}, ${percentage(a3)}%
+        <br>Number 4: ${a4}, ${percentage(a4)}%
+        <br>Number 5: ${a5}, ${percentage(a5)}%
+        <br>Number 6: ${a6}, ${percentage(a6)}%
+        <br> Number 7: ${a7}, ${percentage(a7)}%
+        <br><br>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', init, false);
+  </script>
+
+</body>
+
+</html>
